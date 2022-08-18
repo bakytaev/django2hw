@@ -11,7 +11,7 @@ class User(models.Model):
 
 class Client(models.Model):
     name = models.CharField(max_length=100)
-    card_number = models.IntegerField()
+    card_number = models.CharField(max_length=100)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     def __str__(self):
